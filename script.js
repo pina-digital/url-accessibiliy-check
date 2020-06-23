@@ -23,3 +23,13 @@ function success() {
     document.getElementById("checkButton").disabled = false;
   }
 }
+
+function addItem3() {
+  
+  var theurl = document.getElementById('checkUrl').value;
+  alert(theurl);
+
+  // check if not empty
+  //check format
+  checkurl(theurl);
+}
