@@ -40,7 +40,7 @@ $(document).ready(function () {
         "<br></br>" +
         "<p> Creditsremaining: " +
         data.statistics.creditsremaining +
-        "</p>" + //lior
+        "</p>" + //lior 2
           "</div>"
       );
     },
