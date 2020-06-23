@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial;
+    direction: rtl;
+    text-align: right;
+    background-color: #F5F5F5;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial;
+    direction: rtl;
+    text-align: right;
+    background-color: #F5F5F5;
+}
+
+/*Result*/
+
+#result {
+    padding: 2rem;
+    width: 90%;
+    box-sizing: border-box;
+    min-height: 600px;
+    background-color: #FFFFFF;
+    margin: 1.5rem auto;
+}
+
+#result .postContainer {
+    margin-bottom: 3rem;
+}
+
+#result .postContainer h2 {
+    margin: 0;
+    color: #245156;
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+#result .postContainer p {
+    color: #4c4c4c;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+#result .postContainer a {
+    display: inline-block;
+    background: #DCDCDC;
+    padding: 0.6rem 0.8rem;
+    border-radius: 1.2rem;
+    color: #000000;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/*Loader*/
+
+.loader-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    height: 2em;
+    width: 6em;
+    margin: auto;
+}
+
+.loader-div.line-scale>div {
+    background-color: #ff7902;
+}
+
+/* Style the search field */
+
+.search-container {
+    display: flex;
+    margin: 1rem auto;
+    border: 1px solid grey;
+    border-radius: 20px;
+    width: 80%;
+    background: white;
+    padding: 2px;
+}
+
+.search-container:hover {
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+form.input-field input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    /* width: 90% */
+    width: calc(100% - 2.2rem);
+    background: white;
+}
+
+/* Style the button */
+
+form.input-field button {
+    /* justify-content: flex-end; */
+    width: 2rem;
+    padding: 10px;
+    background: white;
+    color: gray;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
