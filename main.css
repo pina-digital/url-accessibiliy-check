@@ -84,7 +84,7 @@ body {
 
 .loader-div.line-scale>div {
     background-color: #ff7902;
-} 
+}
 
 /* Style the search field */
 
@@ -125,4 +125,11 @@ form.input-field button {
     border-radius: 20px;
     border: none;
     cursor: pointer;
+}
+
+#url-feedback {
+    padding: 0 1rem;
+    width: 80%;
+    color: red;
+    margin: 1.5rem auto;
 }
