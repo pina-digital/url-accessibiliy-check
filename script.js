@@ -29,6 +29,10 @@ function addItem3() {
   var theurl = document.getElementById('checkUrl').value;
   alert(theurl);
 
+  var element = document.getElementById("theloader");
+  element.classList.add("line-scale");
+
+  
   // check if not empty
   //check format
   checkurl(theurl);
