@@ -21,13 +21,6 @@ html {
     font-size: 16px;
 }
 
-body {
-    font-family: Arial;
-    direction: rtl;
-    text-align: right;
-    background-color: #F5F5F5;
-}
-
 /*Result*/
 
 #result {
