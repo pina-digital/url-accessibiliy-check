@@ -1,10 +1,10 @@
 function checkurl(theURL) {
   $(document).ready(function () {
     var result = $("#result");
-    var theURL = "https://pina.co.il/";
+    // var theURL = "https://pina.co.il/";
     $.ajax({
       type: "GET",
-      //   url: "https://wave.webaim.org/api/request?key=Gf4NdsFF1629&url=" + theURL, //Avivit
+      // url: "https://wave.webaim.org/api/request?key=Gf4NdsFF1629&url=" + theURL, //Avivit
       success: function (data) {
         $(".loader-div").fadeOut();
 
