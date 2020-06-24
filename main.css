@@ -21,13 +21,6 @@ html {
     font-size: 16px;
 }
 
-body {
-    font-family: Arial;
-    direction: rtl;
-    text-align: right;
-    background-color: #F5F5F5;
-}
-
 /*Result*/
 
 #result {
@@ -127,9 +120,22 @@ form.input-field button {
     cursor: pointer;
 }
 
-#url-feedback {
+.url-feedback {
+    display: none;
     padding: 0 1rem;
-    width: 80%;
+    max-width: 80%;
     color: red;
-    margin: 1.5rem auto;
+    margin: 0 10%;
+    border: 2px solid red;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+
+.show-feedback {
+    display: inline-block;
+}
+
+form.input-field button:hover {
+    color: black;
 }
