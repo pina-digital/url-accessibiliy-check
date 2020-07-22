@@ -83,6 +83,7 @@ html {
 
 .search-container {
     display: flex;
+    /* align-items: center; */
     margin: 1rem auto;
     border: 1px solid lightgrey;
     border-radius: 20px;
@@ -126,7 +127,7 @@ form.input-field button {
     max-width: 80%;
     color: red;
     margin: 0 10%;
-    border: 2px solid red;
+    border: 1px solid red;
     background-color: white;
     border-radius: 20px;
     padding: 0.5rem 1rem;
