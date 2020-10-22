@@ -2,7 +2,7 @@
 <html dir="rtl" lang="he-IL">
   <head>
     <meta charset="UTF-8" />
-    <title>WordPress REST API Example</title>
+    <title>URL Accessibility Check</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="/main.css" />
@@ -26,33 +26,97 @@
   </head>
 
   <body id="body">
-    <div>
-      <form class="input-field" action="action_page.php">
-        <div class="search-container">
-          <input
-            type="text"
-            id="checkUrl"
-            placeholder="http://www.Your-Domain.com"
-            name="searchURL"
+    <div class="main-container">
+      <div class="logo-container-top">
+        <!-- <a
+          href="https://pina.co.il"
+          target="_blank"
+          role="link"
+          aria-label="לוגו פינה"
+          tabindex="0"
+        > -->
+        <div id="pina-logo">
+          <img
+            src="Pina_Logo_ENG_long.svg"
+            alt="Pina Digital Solutions"
+            width="80%"
           />
-
-          <button type="button" id="clearButxxton" onclick="clearButton()">
-            <i class="fa fa-times" aria-hidden="true"></i>
-          </button>
-          <button type="button" id="checkButton" onclick="searchButton()">
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
         </div>
-      </form>
-      <div id="url-feedback" class="url-feedback"></div>
+        <!-- </a> -->
+      </div>
+      <div class="search-container">
+        <div class="input-field">
+          <div class="search-input tooltip">
+            <span class="tooltiptext">הזן כתובת דומיין לבדיקה</span>
+            <input
+              type="text"
+              id="checkUrl"
+              placeholder="http://www.your-domain.com"
+              name="searchURL"
+              role="input"
+              aria-label="URL Address"
+              tabindex="0"
+            />
+
+            <button type="button" id="clear-button" onclick="clearButton()">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+            <button type="button" id="checkButton" onclick="searchButton()">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div id="url-feedback" class="url-feedback"></div>
+      </div>
+      <div id="result-container">
+        <div id="theloader" class="loader-div">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="logo-container">
+          <!-- <a
+            href="https://pina.co.il"
+            target="_blank"
+            role="link"
+            aria-label="לוגו פינה"
+            tabindex="0"
+          > -->
+          <div id="pina-logo">
+            <img src="footerpina.svg" alt="" width="100%" />
+          </div>
+          <!-- </a> -->
+        </div>
+      </div>
     </div>
-    <div id="result">
-      <div id="theloader" class="loader-div">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="pina-footer">
+      <div class="footer-text">
+        powered by
+        <a
+          href="mailto:info@pina.co.il"
+          role="email"
+          aria-label="Pina Email Address"
+          tabindex="0"
+        >
+          Pina Digital Solutions</a
+        >
+      </div>
+      <div class="footer-fb">
+        <a
+          href="https://www.facebook.com/PinaDigitalSolutions/"
+          target="_blank"
+          role="link"
+          aria-label="Pina_Facebook_Page"
+          tabindex="0"
+        >
+          <img
+            src="facebook-icon-hd-pina.png"
+            alt="Facebook_Logo"
+            width="30px"
+          />
+        </a>
       </div>
     </div>
     <script type="text/javascript" src="/ajax.js"></script>

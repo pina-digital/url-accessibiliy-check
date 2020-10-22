@@ -1,7 +1,6 @@
 function searchButton() {
   var theurl = document.getElementById("checkUrl").value;
   var feedback = document.getElementById("url-feedback");
-
   if (theurl.length === 0) {
     feedback.innerHTML = "נא להזין כתובת אתר אינטרנט";
     feedback.classList.add("show-feedback");
@@ -19,8 +18,9 @@ function searchButton() {
 
   return true;
 }
+
 function clearButton() {
-  var theurl = document.getElementById("checkUrl").value;
+  const theurl = document.getElementById("checkUrl").value;
   if (theurl.length !== 0) {
     // alert("hello world");
     document.getElementById("checkUrl").value = "";
@@ -41,3 +41,10 @@ function urlValidate(theurl) {
   feedback.classList.add("show-feedback");
   return false;
 }
+
+// var theurl = document.getElementById("checkUrl").value;
+// var clearButton = document.getElementById("clear-button");
+// console.log(theurl);
+// if (theurl.length !== 0) {
+//   clearButton.classList.add(" show");
+// }
