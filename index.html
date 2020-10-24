@@ -25,9 +25,9 @@
     />
   </head>
 
-  <body id="body">
+  <body>
     <div class="main-container">
-      <div class="logo-container-top">
+      <div class="main-logo">
         <!-- <a
           href="https://pina.co.il"
           target="_blank"
@@ -38,43 +38,60 @@
         <div id="pina-logo">
           <img
             src="Pina_Logo_ENG_long.svg"
-            alt="Pina Digital Solutions"
+            alt="לוגו פינה פתרונות דיגיטלים"
             width="80%"
           />
         </div>
         <!-- </a> -->
       </div>
       <div class="search-container">
-        <div class="input-field">
-          <div class="search-input tooltip">
-            <span class="tooltiptext">הזן כתובת דומיין לבדיקה</span>
-            <input
-              type="text"
-              id="checkUrl"
-              placeholder="http://www.your-domain.com"
-              name="searchURL"
-              role="input"
-              aria-label="URL Address"
-              tabindex="0"
-            />
-
-            <button type="button" id="clear-button" onclick="clearButton()">
-              <i class="fa fa-times" aria-hidden="true"></i>
-            </button>
-            <button type="button" id="checkButton" onclick="searchButton()">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </div>
+        <div class="search-input tooltip">
+          <input
+            type="text"
+            id="check-url"
+            placeholder="http://www.your-domain.com"
+            role="textbox"
+            aria-label="הזן כתובת דומיין לבדיקה"
+            tabindex="0"
+            onkeyup="if (event.keyCode == 13){event.preventDefault(); searchButton(); }"
+          />
+          <span class="tooltiptext">הזן כתובת דומיין לבדיקה</span>
         </div>
-        <div id="url-feedback" class="url-feedback"></div>
+        <div class="tooltip">
+          <button
+            type="button"
+            id="clear-button"
+            aria-label="כפתור מחיקה"
+            onclick="scanJson()"
+          >
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+          <span id="no-focus" class="tooltiptext">מחיקה</span>
+        </div>
+        <div class="tooltip">
+          <button
+            type="button"
+            id="search-button"
+            aria-label="כפתור חיפוש"
+            onclick="searchButton()"
+          >
+            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+            <span class="tooltiptext">חיפוש</span>
+          </button>
+        </div>
       </div>
-      <div id="result-container">
-        <div id="theloader" class="loader-div">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+      <div id="url-feedback" class="url-feedback"></div>
+
+      <div class="results-container">
+        <div class="loader-main">
+          <div id="the-loader" class="loader-div">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div id="loader-text">נא להמתין עד לסיום הבדיקה</div>
         </div>
         <div class="logo-container">
           <!-- <a
@@ -84,20 +101,20 @@
             aria-label="לוגו פינה"
             tabindex="0"
           > -->
-          <div id="pina-logo">
+          <!-- <div id="pina-logo">
             <img src="footerpina.svg" alt="" width="100%" />
-          </div>
+          </div> -->
           <!-- </a> -->
         </div>
       </div>
     </div>
-    <div class="pina-footer">
+    <div class="footer-container">
       <div class="footer-text">
         powered by
         <a
           href="mailto:info@pina.co.il"
-          role="email"
-          aria-label="Pina Email Address"
+          role="link"
+          aria-label="לשלוח דואר אלקטרוני לפינה פתרונות דיגיטלים"
           tabindex="0"
         >
           Pina Digital Solutions</a
@@ -107,13 +124,14 @@
         <a
           href="https://www.facebook.com/PinaDigitalSolutions/"
           target="_blank"
+          title="click to email feedback"
           role="link"
-          aria-label="Pina_Facebook_Page"
+          aria-label="עמוד פייסבוק של פינה פתרונות דיגיטלים"
           tabindex="0"
         >
           <img
             src="facebook-icon-hd-pina.png"
-            alt="Facebook_Logo"
+            aria-hidden="true"
             width="30px"
           />
         </a>

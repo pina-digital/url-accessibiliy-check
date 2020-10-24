@@ -1,14 +1,23 @@
+function fZoomInRemoveClass() {
+  var feedback = document.getElementById("url-feedback");
+  feedback.classList.remove("show-feedback");
+}
+
 function searchButton() {
-  var theurl = document.getElementById("checkUrl").value;
+  // var theurl = document.getElementById("check-url").value;
+  var theurl = $("#check-url").val();
   var feedback = document.getElementById("url-feedback");
   if (theurl.length === 0) {
-    feedback.innerHTML = "נא להזין כתובת אתר אינטרנט";
+    feedback.innerHTML = "נא להזין כתובת אתר אינטרנט לבדיקה";
     feedback.classList.add("show-feedback");
+    setTimeout(fZoomInRemoveClass, 5000);
+
     return false;
   } else if (!urlValidate(theurl)) {
     return false;
   } else {
-    var element = document.getElementById("theloader");
+    var element = document.getElementById("the-loader");
+
     element.classList.add("line-scale");
     feedback.innerHTML = "";
     feedback.classList.remove("show-feedback");
@@ -20,10 +29,12 @@ function searchButton() {
 }
 
 function clearButton() {
-  const theurl = document.getElementById("checkUrl").value;
+  // const theurl = document.getElementById("check-url").value;
+  const theurl = $("#check-url").val();
+
   if (theurl.length !== 0) {
-    // alert("hello world");
-    document.getElementById("checkUrl").value = "";
+    // document.getElementById("check-url").value = "";
+    $("#check-url").val("");
   }
   return true;
 }
@@ -39,12 +50,20 @@ function urlValidate(theurl) {
   }
   feedback.innerHTML = "הכתובת שהוזנה אינה כתובת חוקית";
   feedback.classList.add("show-feedback");
+  // document.getElementById("check-url").value = "";
+  $("#check-url").val("");
+  $(".results-container").css("display", "none");
+
   return false;
 }
 
-// var theurl = document.getElementById("checkUrl").value;
-// var clearButton = document.getElementById("clear-button");
-// console.log(theurl);
-// if (theurl.length !== 0) {
-//   clearButton.classList.add(" show");
-// }
+function scanJson() {
+  $.getJSON("./data/waveNames.json", function (json) {
+    console.log(json); // this will show the info it in firebug console
+    for (var i = 0; i < json.length; i++) {
+      var obj = json[i].name;
+
+      console.log(obj);
+    }
+  });
+}
