@@ -53,22 +53,22 @@
             role="textbox"
             aria-label="הזן כתובת דומיין לבדיקה"
             tabindex="0"
-            onkeyup="if (event.keyCode == 13){event.preventDefault(); searchButton(); }"
+            onkeyup="showButton(event)"
           />
           <span class="tooltiptext">הזן כתובת דומיין לבדיקה</span>
         </div>
-        <div class="tooltip">
+        <div class="buttons tooltip">
           <button
             type="button"
             id="clear-button"
             aria-label="כפתור מחיקה"
-            onclick="scanJson()"
+            onclick="clearButton()"
           >
             <i class="fa fa-times" aria-hidden="true"></i>
           </button>
           <span id="no-focus" class="tooltiptext">מחיקה</span>
         </div>
-        <div class="tooltip">
+        <div class="buttons tooltip">
           <button
             type="button"
             id="search-button"

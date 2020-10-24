@@ -12,7 +12,7 @@ function checkurl(theURL) {
     $.ajax({
       type: "GET",
       url:
-        "https://wave.webaim.org/api/request?key=hymt4JbB1796&reporttype=2&url=" +
+        "https://wave.webaim.org/api/request?key=YWZgSrRb1799&reporttype=2&url=" +
         theURL, //Avivit
       success: function (data) {
         $(".loader-div").fadeOut();

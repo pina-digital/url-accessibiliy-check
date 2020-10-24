@@ -28,6 +28,19 @@ function searchButton() {
   return true;
 }
 
+$("#clear-button").hide();
+
+function showButton(ev) {
+  if (!$("#check-url").val()) {
+    $("#clear-button").hide();
+  } else if (ev.which === 13) {
+    $("#clear-button").show();
+    searchButton();
+  } else {
+    $("#clear-button").show();
+  }
+}
+
 function clearButton() {
   // const theurl = document.getElementById("check-url").value;
   const theurl = $("#check-url").val();
@@ -35,6 +48,7 @@ function clearButton() {
   if (theurl.length !== 0) {
     // document.getElementById("check-url").value = "";
     $("#check-url").val("");
+    $("#clear-button").hide();
   }
   return true;
 }
